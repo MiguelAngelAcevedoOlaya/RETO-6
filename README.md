@@ -81,3 +81,29 @@ if __name__ == "__main__":
   perimetro_ = perimetro_2_figura(base, altura, radio)
   print("El area de la figura es " + str(area_)+ " y  area superficial es " +str(perimetro_)) #se puso condicional if que defina las variables con teclado y me imprima los valores de area y permietro
 ```
+
+#### PUNTO 3
+
+Diseñe una función que calcule la cantidad de carne de aves en kilos si se tienen N gallinas, M gallos y K pollitos cada uno pesando 6 kilos, 7 kilos y 1 kilo respectivamente.
+
+```
+masa_gina: int =6
+masa_galo: int=7
+masa_poll: int=1
+
+#Se definieron las masas de las gallinas, gallos, pollitos, como constantes
+
+import math as m #importar libreria math
+
+def carne_(gallina:float, gallo:float, pollitos:float) -> float:
+  c_carne = (gallina*masa_gina + gallo*masa_galo + pollitos*masa_poll)
+  return c_carne  #se definio la variable de cantidad de carne
+
+
+if __name__ == "__main__":
+  gallina = float(input("Cantidad de gallinas:"))
+  gallo = float(input("Cantidad de gallos:"))
+  pollitos = float(input("Cantidad de pollitos:"))
+  carne_total = carne_(gallina, gallo, pollitos)
+  print("La cantidad de carne es " + str(carne_total)+ " kilos") #se puso condicional if que defina las variables con teclado y me imprima la cantidad total de carne
+```
