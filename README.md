@@ -142,3 +142,29 @@ if __name__ == "__main__":
     total_vueltas = total_vueltas*(-1)
     print("Papi debes" +str(total_vueltas))  #codigo if que solucione la función, y estableciendo otras condiciones que digan lo que sobro, si no sobro o si quedo debiendo plata
 ```
+
+#### PUNTO 5
+Haga un programa que utilice una función para calcular el valor de un préstamo C usando interés compuesto del i por n meses.
+
+Se considero la formula de interes compuesto de la siguiente imagen:
+
+<img src="figura3.png" width="350">
+
+Siendo k = el monto total
+i = el interes
+n = el tiempo 
+
+```
+def prestamo(cantidad_dinero_prestamo:float, interes:float, meses:float) -> float:
+  dinero_en_prestamo = (cantidad_dinero_prestamo*((1+interes)**meses))
+  return dinero_en_prestamo  #se definio la variable para calcular el valor del prestamo
+
+
+if __name__ == "__main__":
+  cantidad_dinero_prestamo = float(input("Ingresa el dinero que deseas que te presten en pesos:"))
+  interes = float(input("Ingresa el interes del prestamos:"))
+  meses = float(input("Tiempo en el que quieres pagarlo:"))
+  prestamo_ = prestamo(cantidad_dinero_prestamo, interes, meses)
+  print("El valor del prestamo sera de " +str(prestamo_)+ " pesos, solicitando un dinero total de " +str(cantidad_dinero_prestamo)+ " con un interes de " + str(interes)+ " en un plazo de " +str(meses)+ " meses")
+  #codigo if que de el valor del prestamo
+```
