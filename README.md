@@ -1,7 +1,9 @@
 # RETO-6
+
 ### Miguel Angel Acevedo
 
 #### PUNTO 1
+
 Dado la figura de la imagen, desarrolle:
 
 <img src="figura1.png" width="350">
@@ -106,4 +108,37 @@ if __name__ == "__main__":
   pollitos = float(input("Cantidad de pollitos:"))
   carne_total = carne_(gallina, gallo, pollitos)
   print("La cantidad de carne es " + str(carne_total)+ " kilos") #se puso condicional if que defina las variables con teclado y me imprima la cantidad total de carne
+```
+
+#### PUNTO 4
+
+Mi mamá me manda a comprar P panes a 300 cada uno, M bolsas de leche a 3300 cada una y H huevos a 350 cada uno. Hacer un programa que me diga las vueltas (o lo que quedo debiendo) cuando me da un billete de B pesos.
+
+```
+p_pan: int =300
+p_lec: int=3300
+p_hue: int=350
+
+#Se definieron de los precios del pan, leche y huevos, como constantes
+
+import math as m #importar libreria math
+
+def vueta_mama(panes:float, leche:float, huevos:float, dinero:float) -> float:
+  vueltas_ = (dinero- (panes*p_pan + leche*p_lec + huevos*p_hue))
+  return vueltas_  #se definio la variable que devuelva la cantidad de dinero que sobro
+
+
+if __name__ == "__main__":
+  panes = float(input("Cantidad de pan:"))
+  leche = float(input("Bolsas de leche:"))
+  huevos = float(input("Cantidad de huevos:"))
+  dinero = float(input("Cuanto dinero te dio tu mami, por favor ingresa billetes considernado moneda colombiana, ejemplo 1000, 2000, sino deberas hasta la madre perro:"))
+  total_vueltas = vueta_mama(panes, leche, huevos, dinero)
+  if total_vueltas > 0:
+    print("La cantidad de dinero que sobro fue " +str(total_vueltas)+ " pesos, puede comprar dulcesitos en secreto")
+  elif total_vueltas ==0:
+    print("No te quedo dinero pa")
+  elif total_vueltas < 0:
+    total_vueltas = total_vueltas*(-1)
+    print("Papi debes" +str(total_vueltas))  #codigo if que solucione la función, y estableciendo otras condiciones que digan lo que sobro, si no sobro o si quedo debiendo plata
 ```
