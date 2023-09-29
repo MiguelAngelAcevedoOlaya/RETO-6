@@ -148,7 +148,7 @@ Haga un programa que utilice una función para calcular el valor de un préstamo
 
 Se considero la formula de interes compuesto de la siguiente imagen:
 
-<img src="figura3.png" width="350">
+<img src="figura3.png" width="450">
 
 Siendo k = el monto total
 i = el interes
@@ -166,5 +166,412 @@ if __name__ == "__main__":
   meses = float(input("Tiempo en el que quieres pagarlo:"))
   prestamo_ = prestamo(cantidad_dinero_prestamo, interes, meses)
   print("El valor del prestamo sera de " +str(prestamo_)+ " pesos, solicitando un dinero total de " +str(cantidad_dinero_prestamo)+ " con un interes de " + str(interes)+ " en un plazo de " +str(meses)+ " meses")
-  #codigo if que de el valor del prestamo
+  #codigo if que determina el valor del prestamo
 ```
+#### PUNTO 6
+
+El número de contagiados de Covid-19 en el país de NuncaLandia se duplica cada día. Hacer un programa que diga el número total de personas que se han contagiado cuando pasen D días a partir de hoy, si el número de contagiados actuales es C.
+
+
+```
+d : int=2 #variable constante, sera el hecho de que los contagios se duplican cada día
+def covid(dias:float, contagiados_iniciales:float) -> float:
+  contagios = (contagiados_iniciales*(d**dias))
+  return contagios  #se definio la variable para calcular el número de contagiados
+
+
+if __name__ == "__main__":
+  dias = float(input("Ingresa el número de dias que pasan:"))
+  contagiados_iniciales = float(input("Ingresa la cantidad de contagiados inicialmente:"))
+  n_contagios = covid(dias, contagiados_iniciales) 
+  print("El total de contagiados de covid tras pasar " +str(dias)+ " dias, es "  +str(n_contagios)+ " ,considerando que en el dia 0 habian " +str(contagiados_iniciales)+ " contagiados" )
+  #codigo if que determina el número de contagiados
+```
+
+#### PUNTO 7
+Escriba un programa que pida 5 números reales y calcule las siguientes operaciones usando una función para cada una:
+
+El promedio
+La mediana
+El promedio multiplicativo (multilplica todos y luego calcula la raíz de la cantidad de operandos)
+Ordenar los números de forma ascendente
+Ordenar los números de forma descendente
+La potencia del mayor número elevado al menor número
+La raíz cúbica del menor número
+
+```
+aux_n : float # Se  define la constante, que sera la ayuda para ordenar los numeros
+
+def numeros(numero_1:float, numero_2:float, numero_3:float, numero_4:float, numero_5: float) -> float:
+  promedio = ((numero_1 + numero_2 + numero_3 + numero_4 + numero_5)/5)
+  return promedio  #se definio la variable para calcular el promedio
+
+def mediana_(numero_1:float, numero_2:float, numero_3:float, numero_4: float, numero_5: float) -> float:
+
+
+    if numero_1 < numero_2:
+      aux_n = numero_2
+      numero_2 = numero_1
+      numero_1 = aux_n
+
+    if numero_1 < numero_3:
+      aux_n = numero_3
+      numero_3 = numero_1
+      numero_1 = aux_n
+    
+    if numero_1 < numero_3:
+      aux_n = numero_3
+      numero_3 = numero_1
+      numero_1 = aux_n
+
+    if numero_1 < numero_4:
+      aux_n = numero_4
+      numero_4 = numero_1
+      numero_1 = aux_n
+     
+    if numero_1 < numero_5:
+      aux_n = numero_5
+      numero_5 = numero_1
+      numero_1 = aux_n
+    
+    if numero_2 < numero_3:
+      aux_n = numero_3
+      numero_3 = numero_2
+      numero_2 = aux_n
+      
+    if numero_2 < numero_4:
+      aux_n = numero_4
+      numero_4 = numero_2
+      numero_2 = aux_n
+
+    if numero_2 < numero_4:
+      aux_n = numero_4
+      numero_4 = numero_2
+      numero_2 = aux_n
+
+    if numero_2 < numero_5:
+      aux_n = numero_5
+      numero_5 = numero_2
+      numero_2 = aux_n
+
+    if numero_3 < numero_4:
+      aux_n = numero_4
+      numero_4 = numero_3
+      numero_3 = aux_n
+     
+    if numero_3 < numero_5:
+      aux_n = numero_5
+      numero_5 = numero_3
+      numero_3 = aux_n
+
+    if numero_4 < numero_5:
+      aux_n = numero_5
+      numero_5 = numero_4
+      numero_4 = aux_n
+
+    return str(numero_3)
+    #Se definio una variable que imprime la mediana de los datos
+
+def numeros_(numero_1:float, numero_2:float, numero_3:float, numero_4:float, numero_5: float) -> float:
+    promedio_multiplicativo = ((numero_1*numero_2*numero_3*numero_4*numero_5)**0.2)
+    return promedio_multiplicativo #se definio la variable para calcular el promedio multiplicativo
+
+def ordas_(numero_1:float, numero_2:float, numero_3:float, numero_4: float, numero_5: float) -> float:
+
+    if numero_1 > numero_2:
+      aux_n = numero_2
+      numero_2 = numero_1
+      numero_1 = aux_n
+
+    if numero_1 > numero_3:
+      aux_n = numero_3
+      numero_3 = numero_1
+      numero_1 = aux_n
+    
+    if numero_1 > numero_3:
+      aux_n = numero_3
+      numero_3 = numero_1
+      numero_1 = aux_n
+
+    if numero_1 > numero_4:
+      aux_n = numero_4
+      numero_4 = numero_1
+      numero_1 = aux_n
+     
+    if numero_1 > numero_5:
+      aux_n = numero_5
+      numero_5 = numero_1
+      numero_1 = aux_n
+    
+    if numero_2 > numero_3:
+      aux_n = numero_3
+      numero_3 = numero_2
+      numero_2 = aux_n
+      
+    if numero_2 > numero_4:
+      aux_n = numero_4
+      numero_4 = numero_2
+      numero_2 = aux_n
+
+    if numero_2 > numero_4:
+      aux_n = numero_4
+      numero_4 = numero_2
+      numero_2 = aux_n
+
+    if numero_2 > numero_5:
+      aux_n = numero_5
+      numero_5 = numero_2
+      numero_2 = aux_n
+
+    if numero_3 > numero_4:
+      aux_n = numero_4
+      numero_4 = numero_3
+      numero_3 = aux_n
+     
+    if numero_3 > numero_5:
+      aux_n = numero_5
+      numero_5 = numero_3
+      numero_3 = aux_n
+
+    if numero_4 > numero_5:
+      aux_n = numero_5
+      numero_5 = numero_4
+      numero_4 = aux_n
+
+    return str(numero_1)+' '+str(numero_2)+' '+str(numero_3)+' '+str(numero_4)+' '+str(numero_5)   
+    #Se definio una variable que imprime el orden ascendente de los datos
+
+def ordes_(numero_1:float, numero_2:float, numero_3:float, numero_4: float, numero_5: float) -> float:
+
+    if numero_1 < numero_2:
+      aux_n = numero_2
+      numero_2 = numero_1
+      numero_1 = aux_n
+
+    if numero_1 < numero_3:
+      aux_n = numero_3
+      numero_3 = numero_1
+      numero_1 = aux_n
+    
+    if numero_1 < numero_3:
+      aux_n = numero_3
+      numero_3 = numero_1
+      numero_1 = aux_n
+
+    if numero_1 < numero_4:
+      aux_n = numero_4
+      numero_4 = numero_1
+      numero_1 = aux_n
+     
+    if numero_1 < numero_5:
+      aux_n = numero_5
+      numero_5 = numero_1
+      numero_1 = aux_n
+    
+    if numero_2 < numero_3:
+      aux_n = numero_3
+      numero_3 = numero_2
+      numero_2 = aux_n
+      
+    if numero_2 < numero_4:
+      aux_n = numero_4
+      numero_4 = numero_2
+      numero_2 = aux_n
+
+    if numero_2 < numero_4:
+      aux_n = numero_4
+      numero_4 = numero_2
+      numero_2 = aux_n
+
+    if numero_2 < numero_5:
+      aux_n = numero_5
+      numero_5 = numero_2
+      numero_2 = aux_n
+
+    if numero_3 < numero_4:
+      aux_n = numero_4
+      numero_4 = numero_3
+      numero_3 = aux_n
+     
+    if numero_3 < numero_5:
+      aux_n = numero_5
+      numero_5 = numero_3
+      numero_3 = aux_n
+
+    if numero_4 < numero_5:
+      aux_n = numero_5
+      numero_5 = numero_4
+      numero_4 = aux_n
+
+    return str(numero_1)+' '+str(numero_2)+' '+str(numero_3)+' '+str(numero_4)+' '+str(numero_5)
+    #Se definio una variable que imprime el orden descendente de los datos
+
+def may_elev_men(numero_1:float, numero_2:float, numero_3:float, numero_4: float, numero_5: float) -> float: #Tomamos el codigo de ordenar números y eleveamos el numero_1 (mayor) con el numero_5 (menor)
+
+    if numero_1 < numero_2:
+      aux_n = numero_2
+      numero_2 = numero_1
+      numero_1 = aux_n
+
+    if numero_1 < numero_3:
+      aux_n = numero_3
+      numero_3 = numero_1
+      numero_1 = aux_n
+    
+    if numero_1 < numero_3:
+      aux_n = numero_3
+      numero_3 = numero_1
+      numero_1 = aux_n
+
+    if numero_1 < numero_4:
+      aux_n = numero_4
+      numero_4 = numero_1
+      numero_1 = aux_n
+     
+    if numero_1 < numero_5:
+      aux_n = numero_5
+      numero_5 = numero_1
+      numero_1 = aux_n
+    
+    if numero_2 < numero_3:
+      aux_n = numero_3
+      numero_3 = numero_2
+      numero_2 = aux_n
+      
+    if numero_2 < numero_4:
+      aux_n = numero_4
+      numero_4 = numero_2
+      numero_2 = aux_n
+
+    if numero_2 < numero_4:
+      aux_n = numero_4
+      numero_4 = numero_2
+      numero_2 = aux_n
+
+    if numero_2 < numero_5:
+      aux_n = numero_5
+      numero_5 = numero_2
+      numero_2 = aux_n
+
+    if numero_3 < numero_4:
+      aux_n = numero_4
+      numero_4 = numero_3
+      numero_3 = aux_n
+     
+    if numero_3 < numero_5:
+      aux_n = numero_5
+      numero_5 = numero_3
+      numero_3 = aux_n
+
+    if numero_4 < numero_5:
+      aux_n = numero_5
+      numero_5 = numero_4
+      numero_4 = aux_n
+    
+    potencia_ = numero_1**numero_5
+
+    return potencia_
+    #Se definio una variable que imprime el mayor número elevado al menor número
+
+def raiz_m(numero_1:float, numero_2:float, numero_3:float, numero_4: float, numero_5: float) -> float: #Tomamos el codigo de ordenar números y le sacamos la raiz cubica
+
+    if numero_1 < numero_2:
+      aux_n = numero_2
+      numero_2 = numero_1
+      numero_1 = aux_n
+
+    if numero_1 < numero_3:
+      aux_n = numero_3
+      numero_3 = numero_1
+      numero_1 = aux_n
+    
+    if numero_1 < numero_3:
+      aux_n = numero_3
+      numero_3 = numero_1
+      numero_1 = aux_n
+
+    if numero_1 < numero_4:
+      aux_n = numero_4
+      numero_4 = numero_1
+      numero_1 = aux_n
+     
+    if numero_1 < numero_5:
+      aux_n = numero_5
+      numero_5 = numero_1
+      numero_1 = aux_n
+    
+    if numero_2 < numero_3:
+      aux_n = numero_3
+      numero_3 = numero_2
+      numero_2 = aux_n
+      
+    if numero_2 < numero_4:
+      aux_n = numero_4
+      numero_4 = numero_2
+      numero_2 = aux_n
+
+    if numero_2 < numero_4:
+      aux_n = numero_4
+      numero_4 = numero_2
+      numero_2 = aux_n
+
+    if numero_2 < numero_5:
+      aux_n = numero_5
+      numero_5 = numero_2
+      numero_2 = aux_n
+
+    if numero_3 < numero_4:
+      aux_n = numero_4
+      numero_4 = numero_3
+      numero_3 = aux_n
+     
+    if numero_3 < numero_5:
+      aux_n = numero_5
+      numero_5 = numero_3
+      numero_3 = aux_n
+
+    if numero_4 < numero_5:
+      aux_n = numero_5
+      numero_5 = numero_4
+      numero_4 = aux_n
+    
+    raiz_ = numero_5**(1/3)
+
+    return raiz_
+    #Se definio una variable que imprime la raiz cubica del menor número
+
+if __name__ == "__main__":
+  numero_1 = float(input("Ingresa el número 1:"))
+  numero_2 = float(input("Ingresa el número 2:"))
+  numero_3 = float(input("Ingresa el número 3:"))
+  numero_4 = float(input("Ingresa el número 4:"))
+  numero_5 = float(input("Ingresa el número 5:"))
+  prom = numeros(numero_1, numero_2, numero_3, numero_4, numero_5) 
+  print("El promedio de los 5 numeros es " +str(prom))
+  mediana = mediana_(numero_1, numero_2, numero_3, numero_4, numero_5) 
+  print("La mediana es  " +str(mediana))
+  prom_mult = numeros_(numero_1, numero_2, numero_3, numero_4, numero_5) 
+  print("El promedio multiplicativo de los 5 números es " +str(prom_mult))
+  orden_ascendente = ordas_(numero_1, numero_2, numero_3, numero_4, numero_5)
+  print("El orden ascendete de los números es "+str(orden_ascendente))
+  orden_descendente = ordes_(numero_1, numero_2, numero_3, numero_4, numero_5)
+  print("El orden descendete de los números es "+str(orden_descendente))
+  potencia = may_elev_men(numero_1, numero_2, numero_3, numero_4, numero_5)
+  print("La potencia del mayor número elevado al menor es "+str(potencia))
+  raiz = raiz_m(numero_1, numero_2, numero_3, numero_4, numero_5)
+  print("La raiz cúbica del menor número es "+str(raiz))
+  #codigo if que determina el promedio de los números, la mediana, promedio multiplicatico, orden de los numeros de forma ascendete y descendente, el mayor número elevado al menor número, y la raiz cubica del menor número
+
+```
+
+#### PUNTO 8
+
+Para el punto anterior incluir las funciones en un archivo independiente e importarlas para su uso.
+
+Reto#6.81 El promedio
+Reto#6.82 La mediana
+Reto#6.83 El promedio multiplicativo (multilplica todos y luego calcula la raíz de la cantidad de operandos)
+Reto#6.84 Ordenar los números de forma ascendente
+Reto#6.85 Ordenar los números de forma descendente
+Reto#6.86 La potencia del mayor número elevado al menor número
+Reto#6.87 La raíz cúbica del menor número
