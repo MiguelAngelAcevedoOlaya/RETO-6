@@ -191,13 +191,13 @@ if __name__ == "__main__":
 #### PUNTO 7
 Escriba un programa que pida 5 números reales y calcule las siguientes operaciones usando una función para cada una:
 
-El promedio
-La mediana
-El promedio multiplicativo (multilplica todos y luego calcula la raíz de la cantidad de operandos)
-Ordenar los números de forma ascendente
-Ordenar los números de forma descendente
-La potencia del mayor número elevado al menor número
-La raíz cúbica del menor número
+* El promedio
+* La mediana
+* El promedio multiplicativo (multilplica todos y luego calcula la raíz de la cantidad de operandos)
+* Ordenar los números de forma ascendente
+* Ordenar los números de forma descendente
+* La potencia del mayor número elevado al menor número
+* La raíz cúbica del menor número
 
 ```
 aux_n : float # Se  define la constante, que sera la ayuda para ordenar los numeros
@@ -568,10 +568,10 @@ if __name__ == "__main__":
 
 Para el punto anterior incluir las funciones en un archivo independiente e importarlas para su uso.
 
-Reto#6.81 El promedio
-Reto#6.82 La mediana
-Reto#6.83 El promedio multiplicativo (multilplica todos y luego calcula la raíz de la cantidad de operandos)
-Reto#6.84 Ordenar los números de forma ascendente
-Reto#6.85 Ordenar los números de forma descendente
-Reto#6.86 La potencia del mayor número elevado al menor número
-Reto#6.87 La raíz cúbica del menor número
+* Reto#6.81 El promedio
+* Reto#6.82 La mediana
+* Reto#6.83 El promedio multiplicativo (multilplica todos y luego calcula la raíz de la cantidad de operandos)
+* Reto#6.84 Ordenar los números de forma ascendente
+* Reto#6.85 Ordenar los números de forma descendente
+* Reto#6.86 La potencia del mayor número elevado al menor número
+* Reto#6.87 La raíz cúbica del menor número
