@@ -8,11 +8,7 @@ Dado la figura de la imagen, desarrolle:
 
 <img src="figura1.png" width="350">
 
-
-Fuente: https://www.iteramos.com/pregunta/89805/cambiar-el-tamano-de-la-imagen-en-markdown-en-gitlab
-Fuente: https://www.iteramos.com/pregunta/89805/cambiar-el-tamano-de-la-imagen-en-markdown-en-gitlab
-
-Fuente: https://www.iteramos.com/pregunta/89805/cambiar-el-tamano-de-la-imagen-en-markdown-en-gitlab
+ 
 Una función matemática para calcular el volumen y el área superficial.
 Cree dos funciones en python para calcular los valores antes establecidos, al ingresar por teclado r1, r2 y h.
 Revise como utilizar el valor de pi usando import math y math.pi
@@ -575,3 +571,43 @@ Para el punto anterior incluir las funciones en un archivo independiente e impor
 * Reto#6.85 Ordenar los números de forma descendente
 * Reto#6.86 La potencia del mayor número elevado al menor número
 * Reto#6.87 La raíz cúbica del menor número
+
+#### PUNTO 9
+
+Consultar qué es y cómo funciona pip en python:
+
+Pip (Pip Instalador de Paquetes o Pip Instalador de Python.1) es utilizado por los programadores como un sistema que permite instalar y administrar diversos paquetes de softare, previamente escritos en python, en otras palabras se puede decir que pip gestiona paquetes. 
+
+Para poder usarlo se debe tener previamente instalado python en nuestro computadores, para comprobarlo abre simbolo sistema (si no sabes no se que haces tan avaanzado en el curso, amablemente puedes volver a clase 1 del repo de este bello profesor y estudiar lo necesario para legar) y tecla el siguiente comando ```python --version```. Si luego de ste comando se muetra Python con un número de versión, signfica que esta intalado (entre mas nueva la versión mejor, ya que se accede a todos los comandos y cosas nuevas). 
+ 
+Si aun no esta instalado puedes hacerlo en la micrsoft store o en google [python](https://www.python.org/downloads/)
+
+Si ya esta instalado puedes continuar con la como mirar pip, para eso en simbolo de sistema, colocaras pip y este te dara todos sus comandos, si pones pip list, te dara los comandos que ya tienes instalados
+
+Para instalar un programa solo hara falta con ingresar el siguiente comando ``` pip install nombre-paquete ```  siendo el paquete los modulos que se desse instalar
+
+Los usuarios tambien pueden desistalar paquetes con el siguiente codigo ``` pip uninstall nombre-paquete ``` 
+
+Para gestionar listas de paquetes y sus versiones a traves de archivos de requisitos, permitiendo una recreación eficaz de un conjunto de paquetes en entornos separados. Esto con la siquiente orden ```pip install -r requisitos.txt```
+
+Para instalar un paquete pero para una versión concreta de python es necario el siguiente codigo ```pip${versión} install nombre-paquete```
+
+#### PUNTO 10
+
+Hacer un listado de módulos populares para python que se puedan instalar com pip y consultar cómo instalarlos
+
+* NumPy: Biblioteca fundamental para computación numérica en Python. ```pip install numpy```
+* Pandas: Herramienta de manipulación y análisis de datos de alto rendimiento. ```pip install pandas```
+* Matplotlib: Biblioteca para crear visualizaciones y gráficos. ```pip install matplotlib```
+* Seaborn: Biblioteca para mejorar y simplificar la creación de visualizaciones estadísticas. ```pip install seaborn```
+* Scikit-Learn: Biblioteca de aprendizaje automático con herramientas para clasificación, regresión, clustering, etc. ```pip install scikit-learn```
+* TensorFlow: Framework de aprendizaje profundo desarrollado por Google. ```pip install tensorflow```
+* PyTorch: Biblioteca de aprendizaje profundo desarrollada por Facebook. ```pip install torch```
+* Django: Framework web de alto nivel para desarrollo rápido y seguro. ```pip install django```
+* Flask: Microframework web para crear aplicaciones web ligeras. ```pip install flask```
+* Requests: Biblioteca para hacer solicitudes HTTP de manera sencilla. ```pip install requests```
+* Beautiful Soup: Biblioteca para raspar información de páginas web. ```pip install beautifulsoup4```
+* SQLAlchemy: Biblioteca ORM (Mapeo Objeto-Relacional) para trabajar con bases de datos SQL. ```pip install sqlalchemy```
+* Flask-SQLAlchemy: Extensión de Flask para integrar SQLAlchemy en aplicaciones Flask. ```pip install flask-sqlalchemy```
+* Flask-RESTful: Extensión de Flask para crear API RESTful de manera sencilla. ```pip install flask-restful```
+* Django REST framework: Biblioteca para construir API REST en aplicaciones Django. ```pip install djangorestframework```
