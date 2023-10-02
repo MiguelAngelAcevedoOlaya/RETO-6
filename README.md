@@ -562,15 +562,106 @@ if __name__ == "__main__":
 
 #### PUNTO 8
 
-Para el punto anterior incluir las funciones en un archivo independiente e importarlas para su uso.
+Para el punto anterior incluir las funciones en un archivo independiente e importarlas para su uso, importamos el archivo del punto 7 al nuevo archivo python y utilizamos la función from punto_6_7 import (función que necestiemos)
 
 * Reto#6.81 El promedio
+```
+  from reto_6_7 import numeros
+
+numero_1 = float(input("Ingresa el número 1:"))
+numero_2 = float(input("Ingresa el número 2:"))
+numero_3 = float(input("Ingresa el número 3:"))
+numero_4 = float(input("Ingresa el número 4:"))
+numero_5 = float(input("Ingresa el número 5:"))
+
+prome = numeros(numero_1, numero_2, numero_3, numero_4, numero_5)
+print("El promedio de los 5 número es " +str(prome))
+```
+
 * Reto#6.82 La mediana
+```
+from reto_6_7 import mediana_
+numero_1 = float(input("Ingresa el número 1:"))
+numero_2 = float(input("Ingresa el número 2:"))
+numero_3 = float(input("Ingresa el número 3:"))
+numero_4 = float(input("Ingresa el número 4:"))
+numero_5 = float(input("Ingresa el número 5:"))
+
+mediana_8 = mediana_(numero_1, numero_2, numero_3, numero_4, numero_5)
+print("La mediana de los 5 número es " +str(mediana_8))
+
+```
 * Reto#6.83 El promedio multiplicativo (multilplica todos y luego calcula la raíz de la cantidad de operandos)
+```
+from reto_6_7 import numeros_
+
+numero_1 = float(input("Ingresa el número 1:"))
+numero_2 = float(input("Ingresa el número 2:"))
+numero_3 = float(input("Ingresa el número 3:"))
+numero_4 = float(input("Ingresa el número 4:"))
+numero_5 = float(input("Ingresa el número 5:"))
+
+promult_8 = numeros_(numero_1, numero_2, numero_3, numero_4, numero_5)
+print("El promedio multiplicativo de los 5 números es" +str(promult_8))
+
+
+```
 * Reto#6.84 Ordenar los números de forma ascendente
+ ```
+from reto_6_7 import ordas_
+
+numero_1 = float(input("Ingresa el número 1:"))
+numero_2 = float(input("Ingresa el número 2:"))
+numero_3 = float(input("Ingresa el número 3:"))
+numero_4 = float(input("Ingresa el número 4:"))
+numero_5 = float(input("Ingresa el número 5:"))
+
+orden_ascendente = ordas_(numero_1, numero_2, numero_3, numero_4, numero_5)
+print("El orden acendente de los 5 números es " +str(orden_ascendente))
+
+ ```
 * Reto#6.85 Ordenar los números de forma descendente
+```
+rom reto_6_7 import ordes_
+
+numero_1 = float(input("Ingresa el número 1:"))
+numero_2 = float(input("Ingresa el número 2:"))
+numero_3 = float(input("Ingresa el número 3:"))
+numero_4 = float(input("Ingresa el número 4:"))
+numero_5 = float(input("Ingresa el número 5:"))
+
+orden_descendente = ordes_(numero_1, numero_2, numero_3, numero_4, numero_5)
+print("El orden descendente de los números es " +str(orden_descendente))
+
+
+```
 * Reto#6.86 La potencia del mayor número elevado al menor número
+```
+from reto_6_7 import may_elev_men
+
+numero_1 = float(input("Ingresa el número 1:"))
+numero_2 = float(input("Ingresa el número 2:"))
+numero_3 = float(input("Ingresa el número 3:"))
+numero_4 = float(input("Ingresa el número 4:"))
+numero_5 = float(input("Ingresa el número 5:"))
+
+mayor_numero_elevado_al_menor = may_elev_men(numero_1, numero_2, numero_3, numero_4, numero_5)
+print("El mayor número elevado al menor es " +str(mayor_numero_elevado_al_menor))
+
+```
 * Reto#6.87 La raíz cúbica del menor número
+```
+from reto_6_7 import raiz_m
+
+numero_1 = float(input("Ingresa el número 1:"))
+numero_2 = float(input("Ingresa el número 2:"))
+numero_3 = float(input("Ingresa el número 3:"))
+numero_4 = float(input("Ingresa el número 4:"))
+numero_5 = float(input("Ingresa el número 5:"))
+
+raiz_menor_número = raiz_m(numero_1, numero_2, numero_3, numero_4, numero_5)
+print("La raúz cubica del menor número es " +str(raiz_menor_número))
+  ```
 
 #### PUNTO 9
 
