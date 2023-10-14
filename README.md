@@ -152,7 +152,7 @@ n = el tiempo
 
 ```
 def prestamo(cantidad_dinero_prestamo:float, interes:float, meses:float) -> float:
-  dinero_en_prestamo = (cantidad_dinero_prestamo*((1+interes)**meses))
+  dinero_en_prestamo = (cantidad_dinero_prestamo*(((1+(interes*0.01)))**meses))
   return dinero_en_prestamo  #se definio la variable para calcular el valor del prestamo
 
 
